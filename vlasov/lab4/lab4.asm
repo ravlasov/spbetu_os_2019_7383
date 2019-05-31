@@ -98,7 +98,7 @@ load	PROC	NEAR
 	mov al, 1ch 
 	int 21h 
 	pop ds
-	mov dx, offset END_CODE
+	mov dx, offset ENDS_HERE
 	add dx,100h
 	mov cl,4
 	shr dx,cl
@@ -108,6 +108,7 @@ load	PROC	NEAR
 	
 	ret
 load	ENDP
+ENDS_HERE:
 
 unload	PROC	NEAR
 	mov ah, 35h
